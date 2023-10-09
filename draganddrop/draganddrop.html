@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #191919;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .s-img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: width 250ms ease , height 250ms ease;
+            border-radius: 5px; 
+        }
+
+        s.s-img:hover{
+            width: 220px;
+            height: 220px;
+        }
+        .s-img:active{
+            width: 180px;
+            height: 180px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="TestLogo.png" id="img-to-drag" class="s-img" alt="">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js" integrity="sha512-hbEWVzVt2yK7kQmJ1NZirxxO0NPtE4W09fT4f9Emem/n0rMPFHlLbuLcUcLNrtUGWGoQ8qGvKDVJnRRuCzjeZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let el = document.getElementById('img-to-drag');
+        let draggie = new Draggabilly(el);
+    </script>
+</body>
+</html>
